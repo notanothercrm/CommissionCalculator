@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commission Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="main-div" id="app">
+        <div class="jumbotron">
+            <h1 class="display-3">Hello, Ryan!</h1>
+            <p class="lead">I've made this app just for you.</p>
+            <hr class="my-4">
+            <p>Input your SR + your total billings (contract and permanent) into the fields below, it will output the correct amount of commission you should be expecting.</p>
+            
+          </div>
+          <form v-on:submit.prevent="calcComBill">
+    <div class="form-group">
+        <label class="col-form-label col-form-label-lg" for="standardRequirement">Your Standard Requirement</label>
+        <input v-model="standardRequirement" class="form-control form-control-lg" type="number" placeholder="$000..." id="standardRequirement">
+        
+      </div>
+      <div class="form-group">
+        <label  class="col-form-label col-form-label-lg" for="totalBillings">Total Billings, Contract + Permanent</label>
+        <input v-model="totalBillings" class="form-control form-control-lg" type="number" placeholder="$000..." id="totalBillings">
+      </div>
+      <button  type="submit" class="btn btn-primary">Submit</button>
+      <p> {{ commission }}</p>
+    </form>
+    </div>
+    
+
+    
+    
+</body>
+</html>
