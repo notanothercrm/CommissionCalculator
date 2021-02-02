@@ -1,4 +1,4 @@
-# CommissionCalculator
+# Commission Calculator
 
 I made this for my work colleague Ryan. 
 
